@@ -1,7 +1,6 @@
-public class Frame { 
-    byte[] data; 
-    Frame(byte[] d)
-    { 
-        this.data=d; 
-    } 
+public class frame{
+    byte[] data;
+    frame(byte[] d){
+        this.data=d;
+    }
 }

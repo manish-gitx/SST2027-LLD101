@@ -1,11 +1,19 @@
-
-public class PaymentService {
+public class PaymentService{
+    private java.util.List<PaymentProcessor> processors;
+    
+    public PaymentService(){
+        processors=new java.util.ArrayList<>();
+        processors.add(new CardPayment());
+        processors.add(new UpiPayment());
+        processors.add(new WalletPayment());
+    }
+    
     String pay(Payment p){
-        switch (p.provider) {
-            case "CARD": return "Charged card: " + p.amount;
-            case "UPI":  return "Paid via UPI: " + p.amount;
-            case "WALLET": return "Wallet debit: " + p.amount;
-            default: throw new RuntimeException("No provider");
+        for(PaymentProcessor processor:processors){
+            if(processor.canhandle(p.provider)){
+                return processor.process(p.amount);
+            }
         }
+        throw new RuntimeException("No provider");
     }
 }
