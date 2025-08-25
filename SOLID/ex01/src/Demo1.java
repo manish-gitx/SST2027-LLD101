@@ -1,4 +1,4 @@
-public class Demo{
+public class Demo1{
     public static void main(String[] args) {
         TaxCalculator calc = new TaxCalculator();
         Notifier email = new EmailNotifier();
