@@ -1,9 +1,9 @@
-public class orderservice{
-    private taxcalculator calculator;
-    private notifier notifier;
-    private orderstorage storage;
+public class OrderService{
+    private TaxCalculator calculator;
+    private Notifier notifier;
+    private OrderStorage storage;
     
-    public orderservice(taxcalculator calculator, notifier notifier, orderstorage storage){
+    public OrderService(TaxCalculator calculator, Notifier notifier, OrderStorage storage){
         this.calculator=calculator;
         this.notifier=notifier;
         this.storage=storage;
