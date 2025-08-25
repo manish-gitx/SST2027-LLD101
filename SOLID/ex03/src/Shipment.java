@@ -1,7 +1,7 @@
-public class shipment{
+public class Shipment{
     String type;
     double weightkg;
-    shipment(String type, double w){
+    Shipment(String type, double w){
         this.type=type;
         this.weightkg=w;
     }

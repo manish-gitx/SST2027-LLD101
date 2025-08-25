@@ -1,4 +1,4 @@
-public class expressshipping implements shippingstrategy{
+public class ExpressShipping implements ShippingStrategy{
     public double calculatecost(double weight){
         return 80+8*weight;
     }

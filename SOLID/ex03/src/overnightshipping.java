@@ -1,4 +1,4 @@
-public class overnightshipping implements shippingstrategy{
+public class OvernightShipping implements ShippingStrategy{
     public double calculatecost(double weight){
         return 120+10*weight;
     }

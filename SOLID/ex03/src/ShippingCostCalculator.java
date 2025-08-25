@@ -1,15 +1,15 @@
-public class shippingcostcalculator{
-    private java.util.List<shippingstrategy> strategies;
+public class ShippingCostCalculator{
+    private java.util.List<ShippingStrategy> strategies;
     
-    public shippingcostcalculator(){
+    public ShippingCostCalculator(){
         strategies=new java.util.ArrayList<>();
-        strategies.add(new standardshipping());
-        strategies.add(new expressshipping());
-        strategies.add(new overnightshipping());
+        strategies.add(new StandardShipping());
+        strategies.add(new ExpressShipping());
+        strategies.add(new OvernightShipping());
     }
     
-    double cost(shipment s){
-        for(shippingstrategy strategy:strategies){
+    double cost(Shipment s){
+        for(ShippingStrategy strategy:strategies){
             if(strategy.canhandle(s.type)){
                 return strategy.calculatecost(s.weightkg);
             }
